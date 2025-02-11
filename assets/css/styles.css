@@ -9,14 +9,14 @@
 }
 
 :root{
-    --green-200: #9adf9a;
+    --green-200: #38f038;
     --green-400: #30C213;
 
     --pink-500: #C21394;
 
-    --gray-200: #dadada;
-    --gray-400: #bcbbbf;
-    --gray-800: #1e1f23;
+    --gray-200: #d9d9d9;
+    --gray-400: #898b89;
+    --gray-800: #222422;
 
     --black-800: #1b1a1d;
 
@@ -52,6 +52,7 @@ a{
 }
 
 .botao:hover{
+    background: linear-gradient(90deg, var(--green-400), var(--green-200));
     background-color: var(--green-400);
     color: var(--white);
 }
@@ -65,6 +66,7 @@ a{
 span{
     color: var(--pink-500);
     font-weight: 600;
+    font-style:oblique;
 }
 
 /* Estilização - Seção Header */
@@ -166,9 +168,10 @@ p{
 
 .about_container{
     max-width: 1120px;
+    height: 100vh;
     margin: 16px auto;
     padding: 0 1rem;
-    height: 100vh;
+    
 }
 
 .about_container p,
@@ -178,8 +181,9 @@ h1{
 }
 
 .about_container p{
-    text-align: justify;
+    text-align: left;
     text-transform:initial;
+    text-indent: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -200,7 +204,7 @@ h1{
 .about_img{
     width: 20rem;
     height: 20rem;
-    border: 0.5rem solid var(--green-200); 
+    border: 0.5rem solid var(--green-400); 
     border-radius: 50%;
 }
 
@@ -215,10 +219,11 @@ h1{
 
 .contato_container{
     display: grid;
+    height: 80vh;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+    gap: 2rem;
     max-width: 1120px;
     margin: 4rem auto 2rem;
     padding: 0 2rem;
@@ -250,12 +255,12 @@ h1{
 .social_icon:hover{
     filter: brightness(0) 
             saturate(100%) 
-            invert(20%) 
-            sepia(24%) 
-            saturate(4557%) 
-            hue-rotate(242deg) 
-            brightness(89%) 
-            contrast(108%);
+            invert(14%) 
+            sepia(100%) 
+            saturate(4982%) 
+            hue-rotate(306deg) 
+            brightness(85%) 
+            contrast(91%);
 }
 
 /* estilizacao redes sociais */
@@ -361,7 +366,7 @@ form span{
 
 /* smartphone - telas até 480px */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
 
     body{
         display: flex;
@@ -394,7 +399,7 @@ form span{
     }
 
     #titulo a{
-        font-size: 1.75rem;
+        font-size: 1.25rem;
     }
 
     .menu_list{
@@ -408,11 +413,17 @@ form span{
         width: 100%;
         height: auto;
         margin-top: 2rem;
-
     }
 
     .home_content{
-        width: 100%;
+        width: 100vw;
+        padding: 1rem;
+    }
+
+    .home_content h1,
+    h4,
+    p{
+    text-align: center;
     }
 
     .home_content h1{
@@ -425,9 +436,11 @@ form span{
         width: 80%;
     }
 
-    /* .home_content .img{
-        width: 80%;
-    } */
+    .botao_contato{
+        display: none;
+    }
+
+    
 
     #home_texto{
         margin-top: 0.5rem;
@@ -441,25 +454,28 @@ form span{
 
     .about_container{
         flex-direction: column;
-        width: 100%;
+        width: 100vw;
         height: auto;
         margin-top: 3rem;
-
     }
-
-    /* .about_container img{
-        
-    } */
-
+    
     .about_container h1{
+        margin-top: 2rem;
         font-size: 1.75rem;
         line-height: 2.25rem;
     }
 
     .about_github{
         flex-direction: column;
-        gap: 0.5rem;
+    }
 
+    .about_content{
+        width: 100vw;
+        padding: 1rem;
+    }
+
+    .about_content p{
+        text-align: center;
     }
 
     .about_github p{
@@ -481,7 +497,9 @@ form span{
     }
 
     .contato_content{
-        width: 100%;
+        width: 100vw;
+        padding: 1rem;
+        text-align: center;
     }
 
     .contato_content h4{
@@ -491,6 +509,7 @@ form span{
 
     .contato_content p{
         margin: 1rem;
+        text-align: center;
     }
 
     /* ajustes redes sociais */
@@ -510,7 +529,7 @@ form span{
     /* ajustes da form */
 
     form{
-        margin: 1rem 0 0 0;
+        margin: 1rem 1.5rem;
         padding: 1rem;
 
     }
@@ -518,9 +537,18 @@ form span{
 
     /* media para tablets */
 
-@media screen and (min-width: 600px) and (max-width: 1024px) {
+@media screen and (min-width: 601px) and (max-width: 1024px) {
     body {
         font-size: 18px;
+    }
+
+    .menu_content{
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .menu_list{
+        display: none;
     }
 
     .container {
@@ -540,7 +568,9 @@ form span{
     .about_github .botao{
         width: 80%;
     }
-    
 
+    .botao_contato{
+        display: none;
+    }
 }    
 

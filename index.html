@@ -59,13 +59,13 @@
 
                 <div class="flex home_botao">
                     <a class="botao" href="https://github.com/Madsik92" target="_blank">Github</a>
-                    <a class="botao" href="#contact" target="_blank">Contato</a>
+                    <a class="botao botao_contato" href="#contact" target="_blank">Contato</a>
                 </div>
 
             </article>
 
             <article class="flex home_content img" id="home_imagem">
-                <img src="./assets/img/10259340_4401278 (1).svg" alt="">
+                <img src="./assets/img/MAD (7).gif" alt="">
             </article>
 
         </section>
@@ -73,35 +73,9 @@
         <section class="flex about_container" id="about">
 
 
-            <img class="flex about_img" src="./assets/img/pefil.jessica.svg" alt="Foto do Perfil do Github">
-
-
-            <article class="flex about_content" id="about_texto">
-                <h1>Sobre mim</h1>
-
-                <p>Sou <span>desenvolvedora fullstack</span> em formação pelo bootcamp da Generation Brasil, com foco em
-                    JavaScript e
-                    nas principais tecnologias para desenvolvimento web. Durante essa jornada, tenho aprofundado meus
-                    conhecimentos em <span>JavaScript, React e SQL</span>, além de boas práticas de programação,
-                    versionamento de código com Git e metodologias ágeis.</p>
-
-                <p>O que também inclui experiência prática em projetos colaborativos, onde desenvolvi
-                    habilidades essenciais como <span>trabalho em equipe, comunicação e resolução de problemas</span>.
-                </p>
-
-                <p>Estou constantemente aprendendo e desenvolvendo projetos para fortalecer minha base como
-                    desenvolvedora, com o objetivo de construir soluções <span>eficientes e escaláveis.</span></p>
-
-                <div class="flex about_github" id="about_github">
-                    <a class="botao" href="https://github.com/Madsik92" target="_blank">Github</a>
-
-                    <p>8 Seguidores</p>
-                    <p>20 Repositórios</p>
-                </div>
-            </article>
         </section>
 
-        <section class="contato_container" id="contact">
+        <section class="flex contato_container" id="contact">
 
             <article class="contato_content">
                 <h4>Contate-me</h4>
@@ -125,7 +99,11 @@
             </article>
 
 
-            <form onsubmit="window.location.href='sucess.html'; return false;">
+            <form action="https://formsubmit.co/136693952d856ec9f6dbc33293ae6406" method="POST" id="formulario">
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5501/sucess.html">
+                <input type="hidden" name="_captcha" value="false">
+
                 <label for="nome">Nome</label>
                 <input id="nome" type="text" name="nome" placeholder="Digite o seu nome">
                 <span id="txtNome"></span>
@@ -153,6 +131,9 @@
         Feito com 🩷 por Jessica Rosário - 2025
 
     </footer>
+
+    <!-- Scrip JavaScripts -->
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
