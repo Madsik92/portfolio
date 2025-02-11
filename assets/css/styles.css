@@ -9,14 +9,16 @@
 }
 
 :root{
-    --purple-200: #9a7bd1;
-    --purple-500: #6b36c8;
-    --purple-800: #441f88;
+    --green-200: #9adf9a;
+    --green-400: #30C213;
 
-    --gray-200: #cccccc;
-    --gray-400: #505861;
+    --pink-500: #C21394;
 
-    --black-800: #171717;
+    --gray-200: #dadada;
+    --gray-400: #bcbbbf;
+    --gray-800: #1e1f23;
+
+    --black-800: #1b1a1d;
 
     --white: #F9F9F9;
 }
@@ -40,16 +42,17 @@ a{
 }
 
 .botao{
+    color: var(--green-400);
     text-align: center;
     padding: 12px 32px;
     background: none;
-    border: 1px solid var(--purple-800);
+    border: 1px solid var(--green-400);
     border-radius: 10px;
     font-weight: 700;
 }
 
 .botao:hover{
-    background-color: var(--purple-800);
+    background-color: var(--green-400);
     color: var(--white);
 }
 
@@ -59,6 +62,11 @@ a{
     align-items: center;
 }
 
+span{
+    color: var(--pink-500);
+    font-weight: 600;
+}
+
 /* Estilização - Seção Header */
 
 .menu_container{
@@ -66,27 +74,33 @@ a{
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: var(--purple-800);
-    border-bottom:  1px solid var(--purple-500);
+    background-color: var(--gray-800);
+    border-bottom:  1px solid var(--gray-600);
     filter: opacity(0.9)
 }
 
 .menu_container a{
     color: var(--white);
     font-weight: 700;
-
 }
 
 .menu_container a:hover{
-    color: var(--purple-200)
+    color: var(--green-400)
 }
 
 .menu_content{
+    text-transform: uppercase;
     max-width: 1120px;
     padding: 0 24px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+
+.menu_content .logo{
+    width: 3rem;
+    height: 3rem;
 }
 
 .menu_list{
@@ -107,29 +121,34 @@ a{
     height: calc(100vh - 100px);
 }
 
-.home_container p,
-h1,
-h4{
-    text-align: center;
-    font-size: 1rem;
+.home_content h1,
+h4,
+p{
+    text-align: left;
 }
 
-.home_container h1{
+.home_content h1{
     font-size: 2.25rem;
     line-height: 3rem;
     font-weight: 700;
 }
 
-.home_container h4{
+.home_content h4{
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
-.home_container p{
-    margin: 1rem 0;
+.home_content p{
+    font-size: 1rem;
+    margin: 1.5rem 0;
 }
 
-.home_container .botao{
-    width: 50%;
+.home_content .botao{
+    width: 45%;
+}
+
+.home_botao{
+    justify-content: space-evenly;
 }
 
 .home_content{
@@ -139,7 +158,7 @@ h4{
 
 .home_content img{
     margin: 0 auto;
-    width: 75%;
+    width: 90%;
 }
 
 /* Estilização Seção about */
@@ -158,35 +177,134 @@ h1{
     font-size: 1rem;
 }
 
+.about_container p{
+    text-align: justify;
+    text-transform:initial;
+    margin-bottom: 1rem;
+}
+
 .about_container h1{
+    text-transform: uppercase;
+    margin-bottom: 2rem;
     font-size: 2rem;
     line-height: 3rem;
     font-weight: 700;
 }
 
-.about_container p{
-    margin: 1rem 0;
-}
-
 .about_content{
+    margin-left: 1rem;
     width: 50vw;
     flex-direction: column;
 }
 
 .about_img{
-    display: flex;
-    margin-right: 16px;
-    width: 40%;
-    border: 5px solid var(--purple-800);
+    width: 20rem;
+    height: 20rem;
+    border: 0.5rem solid var(--green-200); 
     border-radius: 50%;
 }
 
 .about_github{
+    margin-top: 1.5rem;
     width: 50vw;
     align-items: center;
     justify-content: space-evenly;
 }
 
+/* Estilização da tabela - seção contact */
+
+.contato_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    max-width: 1120px;
+    margin: 4rem auto 2rem;
+    padding: 0 2rem;
+}
+
+.contato_container h4{
+    text-transform: uppercase;
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.contato_content{
+    flex-direction: column;
+    margin: 4rem 0 0 0;
+    font-size: 1rem;
+}
+
+.contato_content p{
+    display: block;
+    text-align: justify;
+}
+
+.social_icon{
+    width: 4rem;
+    height: 4rem;
+}
+
+.social_icon:hover{
+    filter: brightness(0) 
+            saturate(100%) 
+            invert(20%) 
+            sepia(24%) 
+            saturate(4557%) 
+            hue-rotate(242deg) 
+            brightness(89%) 
+            contrast(108%);
+}
+
+/* estilizacao redes sociais */
+
+.social_container{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0 0 0;
+}
+
+
+/* Estilização formulario */
+
+form{
+    background-color: var(--gray-400);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 7rem 0 0 0;
+    padding: 1.5rem 1rem;
+    border: none;
+}
+
+form label{
+    font-size: 1rem;
+    text-align: left;
+}
+
+form input,
+textarea{
+    width: 100%;
+    margin: 0.25rem 0 0.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+}
+
+textarea{
+    resize: none;
+}
+
+form span{
+    margin-bottom: 0.5rem;
+    margin-left: 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--pink-500);
+}
 
 /* estilização footer */
 
@@ -194,14 +312,23 @@ h1{
 .footer_container{
     height: 89px;
     width: 100%;
-    background-color: var(--purple-800);
-    border-bottom:  1px solid var(--purple-500);
+    background-color: var(--gray-800);
+    border-bottom:  1px solid var(--gray-400);
     filter: opacity(0.9);
     color: var(--white);
     font-size: 1rem;
 }
 
 /* estilização sucess */
+
+.menu_container {
+    text-transform: uppercase;
+}
+
+.menu_container img{
+    height: 3rem;
+    margin-right: 0.5rem;
+}
 
 .sucess_container{
     flex-direction: column;
@@ -223,9 +350,197 @@ h1{
     font-size: 1rem;
 }
 
-.sucess_container .botao{
+
+/* .sucess_container .botao{
     display: flex;
     justify-content: center;
     flex-direction: column;
+} */
+
+/* MODO RESPONSIVO */
+
+/* smartphone - telas até 480px */
+
+@media screen and (max-width: 480px) {
+
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+    }
+
+    footer{
+        margin-top: auto;
+    }
+
+    /* ajustes no menu */
+
+    .menu_container{
+        height: auto;
+        padding: 1rem 0;
+
+    }
+
+    .menu_content{
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    #titulo a{
+        font-size: 1.75rem;
+    }
+
+    .menu_list{
+        display: none;
+    }
+
+    /* ajustes no home */
+
+    .home_container{
+        flex-direction: column-reverse;
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+
+    }
+
+    .home_content{
+        width: 100%;
+    }
+
+    .home_content h1{
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    .home_content .botao,
+    .home_content img{
+        width: 80%;
+    }
+
+    /* .home_content .img{
+        width: 80%;
+    } */
+
+    #home_texto{
+        margin-top: 0.5rem;
+    }
+
+    #home_imagem{
+        margin-bottom: 0;
+    }
+    
+    /* ajustes no sobre */
+
+    .about_container{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 3rem;
+
+    }
+
+    /* .about_container img{
+        
+    } */
+
+    .about_container h1{
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    .about_github{
+        flex-direction: column;
+        gap: 0.5rem;
+
+    }
+
+    .about_github p{
+        display: none;
+    }
+
+    .about_github .botao{
+        width: 80%;
+    }
+
+    /* ajustes contato */
+
+    .contato_container{
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+
+    .contato_content{
+        width: 100%;
+    }
+
+    .contato_content h4{
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    .contato_content p{
+        margin: 1rem;
+    }
+
+    /* ajustes redes sociais */
+
+
+    .social_container{
+
+        justify-content: center;
+        width: 100%;
+    }
+
+    .social_icon{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    /* ajustes da form */
+
+    form{
+        margin: 1rem 0 0 0;
+        padding: 1rem;
+
+    }
 }
+
+    /* media para tablets */
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about_github p{
+        display: none;
+    }
+
+    .about_github .botao{
+        width: 80%;
+    }
+    
+
+}    
 

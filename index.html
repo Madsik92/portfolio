@@ -24,8 +24,9 @@
     <header class="flex menu_container">
 
         <div class="menu_content" id="header_content">
-            <div id="titulo">
-                <a href="#">Universo</a>
+            <div class="flex titulo" id="titulo">
+                <img class="flex logo" src="./assets/img/logo-jsr.svg" alt="logo">
+                <a href="#">Jessica Rosário</a>
             </div>
 
             <div id="menu" class="flex">
@@ -47,38 +48,49 @@
     <main>
         <section class="flex home_container" id="home">
 
-            <article class="flex home_content" id="home_texto">
+            <article class="home_content" id="home_texto">
 
-                <h4>Bem-vindo ao Novo Universo</h4>
+                <h1>Olá! Eu sou Jessica Rosário</h1>
 
-                <h1>Mundos diferentes para pessoas diferentes</h1>
+                <h4><Span>Desenvolvedora Fullstack</Span></h4>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit necessitatibus inventore ipsa ipsum
-                    maiores neque consectetur delectus vero voluptate laborum perspiciatis, velit a tempore itaque
-                    expedita nisi voluptas modi eius?</p>
+                <p>Apaixonada por tecnologia, café e desafios. Navegue pelo meu portfólio e conheça meus projetos, minha
+                    jornada no desenvolvimento de software e meu compromisso com soluções inovadoras.</p>
 
-                <a class="botao" href="https://github.com/Madsik92" target="_blank">Explorar</a>
+                <div class="flex home_botao">
+                    <a class="botao" href="https://github.com/Madsik92" target="_blank">Github</a>
+                    <a class="botao" href="#contact" target="_blank">Contato</a>
+                </div>
+
             </article>
 
             <article class="flex home_content img" id="home_imagem">
-                <img src="./assets/img/astronauta.svg" alt="Capacete de um Astronauta Animado">
+                <img src="./assets/img/10259340_4401278 (1).svg" alt="">
             </article>
 
         </section>
 
         <section class="flex about_container" id="about">
 
-            <article  class="about_img">
-                <img src="./assets/img/user_01.svg" alt="Foto do Perfil do Github">
-            </article>
-            
+
+            <img class="flex about_img" src="./assets/img/pefil.jessica.svg" alt="Foto do Perfil do Github">
+
 
             <article class="flex about_content" id="about_texto">
                 <h1>Sobre mim</h1>
 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis rem placeat quod impedit sit
-                    inventore, suscipit nihil, fugit, veritatis eveniet dolorem exercitationem? Ipsum reiciendis nam
-                    dicta. Provident laudantium dolorum quia.</p>
+                <p>Sou <span>desenvolvedora fullstack</span> em formação pelo bootcamp da Generation Brasil, com foco em
+                    JavaScript e
+                    nas principais tecnologias para desenvolvimento web. Durante essa jornada, tenho aprofundado meus
+                    conhecimentos em <span>JavaScript, React e SQL</span>, além de boas práticas de programação,
+                    versionamento de código com Git e metodologias ágeis.</p>
+
+                <p>O que também inclui experiência prática em projetos colaborativos, onde desenvolvi
+                    habilidades essenciais como <span>trabalho em equipe, comunicação e resolução de problemas</span>.
+                </p>
+
+                <p>Estou constantemente aprendendo e desenvolvendo projetos para fortalecer minha base como
+                    desenvolvedora, com o objetivo de construir soluções <span>eficientes e escaláveis.</span></p>
 
                 <div class="flex about_github" id="about_github">
                     <a class="botao" href="https://github.com/Madsik92" target="_blank">Github</a>
@@ -89,23 +101,28 @@
             </article>
         </section>
 
-        <section id="contact">
+        <section class="contato_container" id="contact">
 
-            <h4>Contate-me</h4>
-            <p></p>
-            <div id="icones_redes_sociais">
-                <a href="https://www.linkedin.com/in/jessica-rosario-/" target="_blank">
-                    <img src="./assets/img/linkedin.svg" alt="Logo do Linkedin">
-                </a>
+            <article class="contato_content">
+                <h4>Contate-me</h4>
+                <p>Se você deseja trocar ideias sobre tecnologia, desenvolvimento de software ou oportunidades
+                    profissionais, ficarei feliz em conversar! Vamos construir algo incrível juntos. Entre em contato
+                    comigo:</p>
 
-                <a href="https://github.com/Madsik92" target="_blank">
-                    <img src="./assets/img/github.svg" alt="Logo do Github">
-                </a>
+                <div class="social_container" id="icones_redes_sociais">
+                    <a href="https://www.linkedin.com/in/jessica-rosario-/" target="_blank">
+                        <img src="./assets/img/linkedin.svg" alt="Logo do Linkedin" class="social_icon">
+                    </a>
 
-                <a href="https://www.instagram.com/mad.sik/" target="_blank">
-                    <img src="./assets/img/instagram.svg" alt="Logo do Instagram">
-                </a>
-            </div>
+                    <a href="https://github.com/Madsik92" target="_blank">
+                        <img src="./assets/img/github.svg" alt="Logo do Github" class="social_icon">
+                    </a>
+
+                    <a href="https://www.instagram.com/mad.sik/" target="_blank">
+                        <img src="./assets/img/instagram.svg" alt="Logo do Instagram" class="social_icon">
+                    </a>
+                </div>
+            </article>
 
 
             <form onsubmit="window.location.href='sucess.html'; return false;">
@@ -124,7 +141,7 @@
                 <label for="mensagem">Mensagem</label>
                 <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
 
-                <button type="submit">Enviar</button>
+                <button class="botao" type="submit">Enviar</button>
             </form>
 
         </section>
@@ -133,7 +150,7 @@
     <!-- Rodapé da página -->
     <footer class="flex footer_container">
 
-        Feito com 🧡 por Jessica Rosário - 2025
+        Feito com 🩷 por Jessica Rosário - 2025
 
     </footer>
 </body>
