@@ -5,7 +5,7 @@ const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 async function getApiGithub() {
     try {
-
+        
         const dadosPerfil = await fetch(`https://api.github.com/users/Madsik92`);
         const perfil = await dadosPerfil.json();
 
@@ -80,6 +80,12 @@ formulario.addEventListener("submit", function (event) {
         txtAssunto.innerHTML = "";
     }
 
+    formulario.submit();
 });
 
 getApiGithub();
+
+// const botao = document.querySelector("#b5")
+// botao.addEventListener("click", ()=>{
+//     console.log("cliquei")
+// })
